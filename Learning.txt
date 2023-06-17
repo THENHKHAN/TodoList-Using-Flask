@@ -1,0 +1,15 @@
+mkvirtualenv flaskTodo  ---> virtual env created -- activate: workon flaskTodo
+
+to get data from postman:
+@app.route('/post', methods=["POST"])
+def testpost():
+     input_json = request.get_json(force=True) 
+     dictToReturn = {'text':input_json['text']}
+     return jsonify(dictToReturn)
+
+
+V.v.v.v Important about url and dynamic url:
+
+You have to use in function parameter if you're using dynamic url:
+@app.route('/success/<int:score>')
+def success(score):#  score - you have to mention here else show internal server error and success() got an unexpected keyword argument 'score'
