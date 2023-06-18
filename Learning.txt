@@ -21,3 +21,6 @@ then type:
 >>> app.app_context().push() 
 >>> db.create_all()
 >>> exit()
+
+for making requirements.txt :
+pip freexe> requirements.txt
