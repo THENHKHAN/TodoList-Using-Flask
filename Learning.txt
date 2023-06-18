@@ -13,3 +13,11 @@ V.v.v.v Important about url and dynamic url:
 You have to use in function parameter if you're using dynamic url:
 @app.route('/success/<int:score>')
 def success(score):#  score - you have to mention here else show internal server error and success() got an unexpected keyword argument 'score'
+
+AFter creating the model :
+go into pythin shell :
+then type:
+>>> from app import db , app 
+>>> app.app_context().push() 
+>>> db.create_all()
+>>> exit()
